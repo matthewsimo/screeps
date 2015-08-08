@@ -1,3 +1,7 @@
+
+var creds = require("./creds.json");
+
+
 module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-screeps');
@@ -5,8 +9,8 @@ module.exports = function(grunt) {
     grunt.initConfig({
         screeps: {
             options: {
-                email: 'matthew.a.simo@gmail.com',
-                password: 'P0ps!c13',
+                email: creds.email,
+                password: creds.password,
                 branch: 'default'
             },
             dist: {
