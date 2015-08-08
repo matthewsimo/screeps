@@ -1,11 +1,12 @@
 
 module.exports = {
   entry: {
-    app: ['webpack/hot/dev-server', './src']
+    app: ['./src']
   },
   output: {
-    path: './build',
-    filename: 'bundle.js'
+    path: './dist',
+    filename: 'main.js',
+    libraryTarget: "commonjs2"
   },
   module: {
     loaders: [
